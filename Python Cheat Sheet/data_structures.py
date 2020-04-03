@@ -2,16 +2,16 @@
 #Dictionary
 
 # Creating an empty Dictionary 
-DictEuropeanCapitals = {} 
+DictEuropeanCities = {} 
 
 
 #Populate DictEuropeanMainCitiesPerCountry
 
-DictEuropeanCapitals['Serbia']='Belgrade<-->Novi_Sad'
-DictEuropeanCapitals['Croatia']='Zagreb<-->Dubrovnik<-->Pula'
-DictEuropeanCapitals['Italy']='Rome<-->Naples<-->Turin<-->Milan'
+DictEuropeanCities['Serbia']='Belgrade<-->Novi Sad'
+DictEuropeanCities['Croatia']='Zagreb<-->Dubrovnik<-->Pula'
+DictEuropeanCities['Italy']='Rome<-->Naples<-->Turin<-->Milan'
 
-for i, (j,k) in enumerate(DictEuropeanCapitals.items()):
+for i, (j,k) in enumerate(DictEuropeanCities.items()):
 	splitter_arr = k.split('<-->')
 	capital = splitter_arr[0]
 	print (capital)
@@ -53,7 +53,7 @@ def invadeEarth(attackingFleet, *args):
 			j = i + 1
 			print ("Continent # " + str(j) + ": " + arg)
 	else:
-		print ("No continent specific split all-out assault against everyone with " + str(attackingFleet))
+		print ("No continent specific split - just all-out assault against everyone with " + str(attackingFleet))
 		
 
 invadeEarth(77, *ListContinents)	
@@ -61,10 +61,17 @@ invadeEarth(77)
 
 def travelEurope(numberOfDays, **kwargs):
 	if len(kwargs) > 0:
-		print ("Number of Days per City: " + str(attackingFleetPerContinent) + "\n")
+		citiesPlanned = 0
+		print ("Number of Days per City: " + "\n")
+		for i, (j,k) in enumerate(kwargs.items()):
+			splitter_arr = k.split('<-->')
+			citiesPlanned = citiesPlanned + len(splitter_arr)
+		print (str(numberOfDays / citiesPlanned)) 
+			
+		
 		
 
-		
+travelEurope(18, **DictEuropeanCities)		
 		
 	
 	
