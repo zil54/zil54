@@ -22,9 +22,9 @@ for i, (j,k) in enumerate(DictEuropeanCapitals.items()):
 ListContinentsEmpty = []
 
 #Populated
-ListContinents = ['Africa','SAmerica','NAmerica','Antarctica','Europe','Asia','Australia']
+ListContinents = ['Africa','SAmerica','NAmerica','Europe','Asia','Australia']
 #append
-ListContinents.append('Atlantida')
+ListContinents.append('Antarctica')
 print ("individual continent")
 print (ListContinents[3])
 
@@ -39,3 +39,33 @@ for continent in ListContinents:
 print ("version 3 --> enumerate")	
 for i, continent in enumerate(ListContinents):
 	print (ListContinents[i])
+	
+print ("\n")	
+
+
+#functions using args and kwargs as lists and dictionaries, respectively:
+
+def invadeEarth(attackingFleet, *args):
+	if len(args) > 0:
+		attackingFleetPerContinent = attackingFleet/len(args)
+		print ("Attacking fleet per continent: " + str(attackingFleetPerContinent) + "\n")
+		for i, arg in enumerate(args):
+			j = i + 1
+			print ("Continent # " + str(j) + ": " + arg)
+	else:
+		print ("No continent specific split all-out assault against everyone with " + str(attackingFleet))
+		
+
+invadeEarth(77, *ListContinents)	
+invadeEarth(77)	
+
+def travelEurope(numberOfDays, **kwargs):
+	if len(kwargs) > 0:
+		print ("Number of Days per City: " + str(attackingFleetPerContinent) + "\n")
+		
+
+		
+		
+	
+	
+
