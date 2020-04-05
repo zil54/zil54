@@ -74,5 +74,28 @@ def travelEurope(numberOfDays, **kwargs):
 travelEurope(18, **DictEuropeanCities)		
 		
 	
-	
+
+#Tuples
+
+# Creating an empty tuple
+emptyTuple = ()
+
+
+#Once a tuple is created, you cannot add items to it. Tuples are unchangeable.
+#1-member tuple
+oneMemberTuple = ("zzz",)
+
+primeNumbersAround100 = (97,101,103,107,109)
+
+#iterate
+print ("Prime Numbers around 100: " + "\n")
+for primn in primeNumbersAround100:
+	print (primn)
+
+
+
+
+ 
+
+
 
