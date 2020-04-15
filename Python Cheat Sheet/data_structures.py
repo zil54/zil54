@@ -94,8 +94,22 @@ for primn in primeNumbersAround100:
 
 
 
+#Sets - a set is a collection which is unordered and unindexed. In Python sets are written with curly brackets. Elements unique
+set1 = {"x","y","z"}
 
- 
+#empty set: 
+set2 = set()
 
+#can be for-loop'ed
+for elem in set1:
+	print(elem)
 
+set2.add("a")
+set2.update(["b","c","d"])
+set2.remove("c")
+print (set2)
 
+#non-unique elements nothing will get added
+set1.add("x")
+for elem in set1:
+	print(elem)
