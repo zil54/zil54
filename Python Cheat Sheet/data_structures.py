@@ -11,11 +11,11 @@ DictEuropeanCities['Serbia']='Belgrade<-->Novi Sad'
 DictEuropeanCities['Croatia']='Zagreb<-->Dubrovnik<-->Pula'
 DictEuropeanCities['Italy']='Rome<-->Naples<-->Turin<-->Milan'
 
-for i, (j,k) in enumerate(DictEuropeanCities.items()):
+for i,(j,k) in enumerate(DictEuropeanCities.items()):
 	splitter_arr = k.split('<-->')
 	capital = splitter_arr[0]
-	print (capital)
-	print (i)
+	print(capital)
+	print(i)
 
 
 #Create on empty list
