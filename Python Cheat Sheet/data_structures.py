@@ -88,9 +88,9 @@ oneMemberTuple = ("zzz",)
 primeNumbersAround100 = (97,101,103,107,109)
 
 #iterate
-print ("Prime Numbers around 100: " + "\n")
+print("Prime Numbers around 100: " + "\n")
 for primn in primeNumbersAround100:
-	print (primn)
+	print(primn)
 
 
 
@@ -107,7 +107,7 @@ for elem in set1:
 set2.add("a")
 set2.update(["b","c","d"])
 set2.remove("c")
-print (set2)
+print(set2)
 
 #non-unique elements nothing will get added
 set1.add("x")
