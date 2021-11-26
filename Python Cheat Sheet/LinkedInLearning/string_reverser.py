@@ -14,9 +14,9 @@ while s > 0:
     stringAsCharStack.pop()
     s = s-1
 
-reversed_string = reverseStringAsCharStack.get_stack_as_one_string()
+#reversed_string = reverseStringAsCharStack.get_stack_as_one_string()
 
-#class - not working:
+#class:
 #while not stringAsCharStack.is_empty():
 #   reversed_string = reversed_string + (str)get_stack_as_one_stringstringAsCharStack.pop()
 
