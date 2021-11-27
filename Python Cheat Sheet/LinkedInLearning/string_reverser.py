@@ -9,12 +9,14 @@ for ch in string:
 
 #dz:
 s = stringAsCharStack.size()
+#for item in range(stringAsCharStack.size()-1, -1, -1):
+#    reversed_string = reversed_string + str(item)
 while s > 0:
     reverseStringAsCharStack.push(stringAsCharStack.peek())
     stringAsCharStack.pop()
     s = s-1
 
-#reversed_string = reverseStringAsCharStack.get_stack_as_one_string()
+reversed_string = reverseStringAsCharStack.get_stack_as_one_string()
 
 #class:
 #while not stringAsCharStack.is_empty():
