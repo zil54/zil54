@@ -40,7 +40,7 @@ print ("version 3 --> enumerate")
 for i, continent in enumerate(ListContinents):
 	print (ListContinents[i])
 	
-print ("\n")	
+print("\n")
 
 
 #functions using args and kwargs as lists and dictionaries, respectively:
