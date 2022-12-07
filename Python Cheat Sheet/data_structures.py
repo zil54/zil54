@@ -7,17 +7,48 @@ DictEuropeanCities = {}
 
 #Populate DictEuropeanMainCitiesPerCountry
 
-DictEuropeanCities['Serbia']='Belgrade<-->Novi Sad'
-DictEuropeanCities['Croatia']='Zagreb<-->Dubrovnik<-->Pula'
+DictEuropeanCities['Croatia']='Zagreb<-->Dubrovnik'
 DictEuropeanCities['Italy']='Rome<-->Naples<-->Turin<-->Milan'
 
-for i,(j,k) in enumerate(DictEuropeanCities.items()):
-	splitter_arr = k.split('<-->')
+#add value key-value pair to dic
+DictEuropeanCities.update(France='Paris<-->Nice<-->Lyon<-->Avignon')
+DictEuropeanCities.update(Spain='Madrid<-->Barcelona<-->Malaga<-->Valencia',Holland='Amsterdam<-->Rotterdam<-->Hague<-->Utrecht')
+
+#add parametrized key-value pair to dic
+y = 'Stockholm<-->Malmo<-->Gothenburg'
+DictEuropeanCities.update(Sweden=y)
+
+
+#Iterate Dictionary via enumerate
+for i,(k,v) in enumerate(DictEuropeanCities.items()):
+	splitter_arr = v.split('<-->')
 	capital = splitter_arr[0]
 	print(capital)
 	print(i)
 
+#Iterate Dictionary keys
+for country in DictEuropeanCities:
+	print(country)
 
+#Iterate Dictionary value
+for cities in DictEuropeanCities.values():
+	print(cities)
+
+#Iterate Key value pairs
+for country, cities in DictEuropeanCities.items():
+	print(country, ":", cities)
+
+#get dictionary value by key
+print(DictEuropeanCities.get('Croatia'))
+
+#get dictionary key by value
+print("One line Code Key value: ", list(DictEuropeanCities.keys())[list(DictEuropeanCities.values()).index('Zagreb<-->Dubrovnik')])
+
+
+
+
+
+print ("-------------")
 #Create on empty list
 ListContinentsEmpty = []
 
@@ -29,8 +60,8 @@ print ("individual continent")
 print (ListContinents[3])
 
 print ("version 1 --> range")
-for x in range(len(ListContinents)): 
-    print (ListContinents[x])
+for x in range(len(ListContinents)):
+	print (ListContinents[x])
 
 print ("version 2 --> simple for loop")
 for continent in ListContinents:
@@ -39,6 +70,8 @@ for continent in ListContinents:
 print ("version 3 --> enumerate")	
 for i, continent in enumerate(ListContinents):
 	print (ListContinents[i])
+	#or:
+	print (continent)
 	
 print("\n")
 
