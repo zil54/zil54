@@ -72,7 +72,7 @@ for i, continent in enumerate(ListContinents):
 	print (ListContinents[i])
 	#or:
 	print (continent)
-	
+	k
 print("\n")
 
 
