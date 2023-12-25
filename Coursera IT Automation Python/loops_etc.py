@@ -13,7 +13,10 @@ def print_prime_factors(number):
       factor += 1
   return "Done"
 
+
+
 print_prime_factors(100)
+#print_prime_factors1(33)
 # Should print 2,2,5,5
 # DO NOT DELETE THIS COMMENT
 
@@ -31,6 +34,9 @@ print(is_power_of_two(0))  # Should be False
 print(is_power_of_two(1))  # Should be True
 print(is_power_of_two(8))  # Should be True
 print(is_power_of_two(9))  # Should be False
+
+
+
 
 print ("-------")
 def sum_divisors(n):
@@ -73,6 +79,15 @@ for n in range(0, 10):
   print(n, factorial(n + 1))
 
 print ("-------")
+
+for x in range (1,10,3):
+    print(x)
+
+print ("$$$$$$$$$$$$$$$$$$$$$")
+
+
+
+
 def multiples_seven(range_start, range_end):
     result = []
     while range_start <= range_end:
@@ -101,6 +116,12 @@ for x in range(10):
 print ("-------")
 for x in range(1, 10, 3):
     print(x)
+print ("^^^^^")
+for x in range(5):
+    num1 = x
+    for y in range(14):
+        num2 = y + 3
+print(num1 + num2)
 
 print ("-------")
 def even_numbers(maximum):
