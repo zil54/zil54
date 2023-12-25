@@ -7,7 +7,7 @@ url = "https://theweekinchess.com/twic"
 browser.visit(url)
 time.sleep(7)
 
-for i in range(1449,1462):
+for i in range(1469,1477):
 	browser.visit('https://www.theweekinchess.com/zips/twic'+str(i)+'c6.zip')
 	time.sleep(7)
 

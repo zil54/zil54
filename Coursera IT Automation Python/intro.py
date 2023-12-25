@@ -5,6 +5,7 @@ print(type('q'))
 print(type(True))
 print(type(math.pi))
 print(type(math.ceil(2.55)))
+print("blue" == "Blue")
 
 #multi-return
 def convert_seconds(secs):
