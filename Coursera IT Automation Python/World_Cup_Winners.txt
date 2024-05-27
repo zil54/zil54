@@ -1,0 +1,72 @@
+List of finals of the FIFA World Cup Year(Winners 	Score 	Runners-up 	Venue 	Location 	Attendance):
+
+1930 	Uruguay  	4–2 	 Argentina 	Estadio Centenario 	Montevideo, Uruguay 	68,346
+1934 	Italy  	2–1 (a.e.t.) 	 Czechoslovakia 	Stadio Nazionale PNF 	Rome, Italy 	55,000 
+1938 	Italy  	4–2 	 Hungary 	Stade Olympique de Colombes 	Paris, France 	45,000
+1950 	Uruguay  	2–1[n 3] 	 Brazil 	Maracanã Stadium 	Rio de Janeiro, Brazil 	173,850
+1954 	West Germany  	3–2 	 Hungary 	Wankdorf Stadium 	Bern, Switzerland 	62,500
+1958 	Brazil  	5–2 	 Sweden 	Råsunda Stadium 	Solna, Sweden 	49,737
+1962 	Brazil  	3–1 	 Czechoslovakia 	Estadio Nacional 	Santiago, Chile 	68,679
+1966 	England  	4–2 (a.e.t.) 	 West Germany 	Wembley Stadium 	London, England 	96,924
+1970 	Brazil  	4–1 	 Italy 	Estadio Azteca 	Mexico City, Mexico 	107,412
+1974 	West Germany  	2–1 	 Netherlands 	Olympiastadion 	Munich, West Germany 	78,200
+1978 	Argentina  	3–1 (a.e.t.) 	 Netherlands 	Estadio Monumental 	Buenos Aires, Argentina 	71,483
+1982 	Italy  	3–1 	 West Germany 	Santiago Bernabéu 	Madrid, Spain 	90,000
+1986 	Argentina  	3–2 	 West Germany 	Estadio Azteca 	Mexico City, Mexico 	114,600
+1990 	West Germany  	1–0 	 Argentina 	Stadio Olimpico 	Rome, Italy 	73,603
+1994 	Brazil  	0–0 (a.e.t.)(3–2 pen.) 	 Italy 	Rose Bowl 	Pasadena, California, United States 	94,194
+1998 	France  	3–0 	 Brazil 	Stade de France 	Saint-Denis, France 	80,000
+2002 	Brazil  	2–0 	 Germany 	International Stadium 	Yokohama, Japan 	69,029
+2006 	Italy  	1–1 (a.e.t.) (5–3 pen.) 	 France 	Olympiastadion 	Berlin, Germany 	69,000
+2010 	Spain  	1–0 (a.e.t.) 	 Netherlands 	Soccer City 	Johannesburg, South Africa 	84,490
+2014 	Germany  	1–0 (a.e.t.) 	 Argentina 	Maracanã Stadium 	Rio de Janeiro, Brazil 	74,738
+2018 	France  	4–2 	 Croatia 	Luzhniki Stadium 	Moscow, Russia 	78,011
+2022 	Argentina  	3–3 (a.e.t.) (4–2 pen.) 	 France 	Lusail Stadium 	Lusail, Qatar 	88,966 
+2026 							
+
+
+
+Winners: 
+Brazil - 5 (1958, 1962, 1970, 1994, 2002) 
+Germany (West Germany) - 4 (1954, 1974, 1990, 2014)
+Italy - 4 (1934, 1938, 1982, 2006)
+Argentina - 3 (1978, 1986, 2022) 
+France - 2 (1998, 2018)
+Uruguay - 2 (1930, 1950) 
+England - 1 (1966)
+Spain - 1 (2010)
+NMY2-7SYZ-BR7R-DX3C
+ 
+42NF6H34FXWJBQ834BTR6Q43D:
+
+
+Annotation
+	
+Description
+[Fact] 	Marks a test method, i.e., actual test in a class
+Assert.Throws Record Exception 	Verify the raise and raise assert, irrespective of the place in the code where the problem occurs.
+Constructor 	This is not an attribute but is an ideal replacement for the [SetUp] attribute. The constructor should be parameter-less.
+IDisposable.Dispose 	This is not an attribute but is an ideal replacement for the [TearDown] attribute. This is where the code for performing necessary cleanup and de-initialization is included.
+
+The decision to do away with [TearDown] was made as the investors of xUnit felt that a lot of unnecessary code was run before every single test execution.
+[Trait] 	Used to set arbitrary meta-data on a test
+[Theory] 	This attribute is used when data-driven tests have to be executed. In such cases, [Theory] has to be used instead of [Fact] attribute
+[InlineData] 	This attribute is used along with the [Theory] attribute to supply a subset of data against which parameterized tests will be executed.
+[ClassData] 	This attribute is used when the parameters being passed to the [Theory] tests are not constants.
+[Theory] [ClassData(typeof(some-data))]
+[MemberData] 	This attribute can be used to fetch data for [Theory] from a static method. The most common approach is to load the data from the property of a test class, i.e., using IEnumerable&lt: object[] > 
+
+[Test] 	[TestMethod] 	[Fact] 	Marks a test method.
+[TestFixture] 	[TestClass] 	n/a 	xUnit.net does not require an attribute for a test class; it looks for all test methods in all public (exported) classes in the assembly.
+Assert.That
+Record.Exception 	[ExpectedException] 	Assert.Throws
+Record.Exception 	xUnit.net has done away with the ExpectedException attribute in favor of Assert.Throws. See Note 1
+[SetUp] 	[TestInitialize] 	Constructor 	We believe that use of [SetUp] is generally bad. However, you can implement a parameterless constructor as a direct replacement. See Note 2
+[TearDown] 	[TestCleanup] 	IDisposable.Dispose 	We believe that use of [TearDown] is generally bad. However, you can implement IDisposable.Dispose as a direct replacement. See Note 2
+[OneTimeSetUp] 	[ClassInitialize] 	IClassFixture<T> 	To get per-class fixture setup, implement IClassFixture<T> on your test class. See Note 3
+[OneTimeTearDown] 	[ClassCleanup] 	IClassFixture<T> 	To get per-class fixture teardown, implement IClassFixture<T> on your test class. See Note 3
+n/a 	n/a 	ICollectionFixture<T> 	To get per-collection fixture setup and teardown, implement ICollectionFixture<T> on your test collection. See Note 3
+[Ignore("reason")] 	[Ignore] 	[Fact(Skip="reason")] 	Set the Skip parameter on the [Fact] attribute to temporarily skip a test.
+[Property] 	[TestProperty] 	[Trait] 	Set arbitrary metadata on a test
+[Theory] 	[DataSource] 	[Theory]
+[XxxData] 	Theory (data-driven test). 
