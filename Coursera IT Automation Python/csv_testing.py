@@ -1,4 +1,5 @@
 import csv
+import itertools
 import os
 
 '''
@@ -68,146 +69,81 @@ The modules, features, and attributes in this reading are only some of the comma
 
 #print (os.path.abspath(os.getcwd()))
 
+class CSVUtility:
+
+    def __init__(self, sourceDir, sourceFile):
+        self.sourceDir = sourceDir
+        self.sourceFile = sourceFile
+
+    def csv_print_each_row(self, bool_useDictReader, bool_skipHeader_non_Dict=None):
+        file_to_read = os.path.join(self.sourceDir,self.sourceFile)
+        with open(file_to_read, 'r') as file:
+            if not bool_useDictReader:
+                reader = csv.reader(file)
+                if bool_skipHeader_non_Dict:
+                    next(reader, None)  # skip header
+                for row in reader:
+                    print(" ".join(row))
+            else:
+                reader = csv.DictReader(file)  # header is automatically used as keys
+                for row in reader:
+                    print(row)
 
 
-def csv_demo(file_name):
-    test_file = os.path.join(os.getcwd(), file_name)
-    with open(test_file, 'r') as file:
-        reader = csv.reader(file)
-        next(reader, None) #skip header
-        for row in reader:
-            print(" ".join(row))
-    file.close()
-
-def csv_demo_reader_dict(file_name):
-    test_file = os.path.join(os.getcwd(), file_name)
-    with open(test_file, 'r') as file:
-        reader = csv.DictReader(file)
-        for row in reader:
+    def csv_print_specific_keys_values(self):
+        file_to_read  = os.path.join(self.sourceDir,self.sourceFile)
+        list_years = []
+        list_winners = []
+        list_runners_up = []
+        with open(file_to_read, 'r') as file:
+            reader = csv.DictReader(file)
+            for row in reader:
             # Each row is a dictionary
-            print(row)
-    file.close()
+                for keys, values in row.items():
+                    if keys.strip() == 'Winner':
+                        list_winners.append(values)
+                    elif keys.strip() == 'Runner-Up':
+                        list_runners_up.append(values)
+                    elif keys.strip() == 'Year':
+                        list_years.append(values)
+                   # print("key " + keys + "\n")
+                   # print("value " + values + "\n" + "-------")
+        for each_value1, each_value2, each_value3 in zip(list_years, list_winners, list_runners_up):
+            print ("Year: " + each_value1 + " Winner: " + each_value2 + " Runner-Up: " + each_value3)
+    def csv_demo_writer(self, list_of_items_to_write):
+        file_to_write = os.path.join(self.sourceDir, self.sourceFile)
+        with open(file_to_write, "w") as file:
+            for item in list_of_items_to_write:
+                file.write(item)
 
-def csv_demo_reader_dict2(file_name):
-    test_file = os.path.join(os.getcwd(), file_name)
-    with open(test_file, 'r') as file:
-        reader = csv.DictReader(file)
-        for row in reader:
-            # Each row is a dictionary
-            print(("{} won vs. {}").format(row["Winner"], row["Runner-Up"]))
-    file.close()
+    def csv_demo_writer2(self, list_of_dicts_to_write):
+        file_to_write = os.path.join(self.sourceDir, self.sourceFile)
+        with open(file_to_write, "w", newline='') as file:
+            # Assuming all dictionaries have the same keys, use the keys from the first dictionary as the header
+            fieldnames = list_of_dicts_to_write[0].keys()
+            writer = csv.DictWriter(file, fieldnames=fieldnames)
+
+            writer.writeheader()  # Write the header row
+            writer.writerows(list_of_dicts_to_write)  # Write all th
 
 
-def create_file(filename):
-  with open(filename, "w") as file:
-    file.write("name,color,type\n")
-    file.write("carnation,pink,annual\n")
-    file.write("daffodil,yellow,perennial\n")
-    file.write("iris,blue,perennial\n")
-    file.write("poinsettia,red,perennial\n")
-    file.write("sunflower,yellow,annual\n")
 
 # Read the file contents and format the information about each row
-def contents_of_file(filename):
-  return_string = ""
 
-  # Call the function to create the file
-  create_file(filename)
-
-  # Open the file
-  with open(filename, "r") as file:
-    # Read the rows of the file into a dictionary
-    csv_reader = csv.DictReader(file)
-    # Process each row
-    for row in csv_reader:
-      name, color, plant_type = row["name"], row["color"], row["type"]
-      # Format the return string for data rows only
-      return_string += "a {} {} is {}\n".format(name, color, plant_type)
-  return return_string
-
-#Call the function
-print(contents_of_file("flowers.csv"))
-
-# Read the file contents and format the information about each row
-def contents_of_file(filename):
-  return_string = ""
-
-  # Call the function to create the file
-  create_file(filename)
-
-  # Open the file
-  with open(filename, "r") as file:
-    csv_reader = csv.DictReader(file)
-    # Process each row
-    for row in csv_reader:
-      name, color, plant_type = row["name"], row["color"], row["type"]
-      # Format the return string for data rows only
-
-      return_string += "a {} {} is {}\n".format(name, color, plant_type)
-  return return_string
-
-#Call the function
-print(contents_of_file("flowers.csv"))
-def cvs_demo_writer():
-    rows = [{'name': 'John', 'age': 30, 'city': 'New York'},
-            {'name': 'Anne', 'age': 25, 'city': 'Paris'},]
-    # Add more dictionaries as needed]
-
-# Specify the fieldnames (keys of the dictionaries)
-    fieldnames = ['name', 'age', 'city']
-
-# Open the CSV file for writing
-    with open('people.csv', 'w', newline='') as csvfile:
-    # Create a DictWriter object
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-
-    # Write the header (optional)
-        writer.writeheader()
-
-    # Write the rows
-        writer.writerows(rows)
-
-
-
-
-# Create a file with data in it
-def create_file1(filename):
-  with open(filename, "w") as file:
-    file.write("name,color,type\n")
-    file.write("carnation,pink,annual\n")
-    file.write("daffodil,yellow,perennial\n")
-    file.write("iris,blue,perennial\n")
-    file.write("poinsettia,red,perennial\n")
-    file.write("sunflower,yellow,annual\n")
-
-# Read the file contents and format the information about each row
-def contents_of_file1(filename):
-  return_string = ""
-
-  # Call the function to create the file
-  create_file(filename)
-
-  # Open the file
-  with open(filename, "r") as file:
-    # Read the rows of the file into a dictionary
-    csv_reader = csv.DictReader(file)
-    # Process each item of the dictionary
-    for row in csv_reader:
-      return_string += "a {} {} is {}\n".format(row["color"], row["name"], row["type"])
-  return return_string
-
-#Call the function
-print(contents_of_file("flowers.csv"))
 
 
 
 
 
 def main():
-    csv_demo("World_Cup_Winners.csv")
-   # csv_demo_reader_dict("World_Cup_Winners.csv")
-   # csv_demo_reader_dict2("World_Cup_Winners.csv")
-   # print(create_python_script("program.py"))
+    CSV_Util = CSVUtility(os.getcwd(),"World_Cup_Winners.csv")
+    CSV_Util.csv_print_each_row(False, True)
+    CSV_Util.csv_print_specific_keys_values()
+
+#write
+    #list_of_items_to_write = ["name,color,type\n","carnation,pink,annual\n","daffodil,yellow,perennial\n","iris,blue,perennial\n","poinsettia,red,perennial\n","sunflower,yellow,annual\n"]
+   # CSV_Util1 = CSVUtility(os.getcwd(), "Flowers.csv")
+    #CSV_Util1.csv_demo_writer(list_of_items_to_write)
 
 if __name__ == "__main__":
     main()
