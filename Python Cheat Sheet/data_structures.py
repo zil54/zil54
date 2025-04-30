@@ -8,6 +8,7 @@ DictEuropeanCities = {}
 
 DictEuropeanCities['Croatia'] = 'Zagreb<-->Dubrovnik'
 DictEuropeanCities['Italy'] = 'Rome<-->Naples<-->Turin<-->Milan'
+DictEuropeanCities['Germany'] = 'Berlin<-->Frankfurt-->Cologne<-->Dresden'
 
 # add value key-value pair to dic
 DictEuropeanCities.update(France='Paris<-->Nice<-->Lyon<-->Avignon')
@@ -112,7 +113,7 @@ Example
 Only accept items that are not "apple":
 newlist = [x for x in fruits if x != "apple"]
 
-The condition if x != "apple"  will return True for all elements other than "apple", 
+The condition if x != "apple"  will return True for all elements other than "apple",
 making the new list contain all fruits except "apple".
 
 The condition is optional and can be omitted:
@@ -135,7 +136,7 @@ Accept only numbers lower than 5:
 newlist = [x for x in range(10) if x < 5]
 Expression
 
-The expression is the current item in the iteration, but it is also the outcome, which you can 
+The expression is the current item in the iteration, but it is also the outcome, which you can
 manipulate before it ends up like a list item in the new list:
 Example
 
@@ -148,12 +149,12 @@ Example
 Set all values in the new list to 'hello':
 newlist = ['hello' for x in fruits]
 
-The expression can also contain conditions, not like a filter, but as a way to manipulate 
+The expression can also contain conditions, not like a filter, but as a way to manipulate
 the outcome:
 Example
 
 Return "orange" instead of "banana":
-newlist = [x if x != "banana" else "orange" for x in fruits] 
+newlist = [x if x != "banana" else "orange" for x in fruits]
 """
 
 def squares(start, end):
