@@ -1,4 +1,4 @@
-import re
+
 '''
 re.compile(pattern, flags=0): Compiles a regular expression pattern into a regex object.
 re.search(pattern, string, flags=0): Searches for the first occurrence of the pattern in the given string.
