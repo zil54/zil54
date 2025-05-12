@@ -3,7 +3,7 @@ from tkinter import messagebox
 import random
 
 class TicTacToe:
-    alternate_starting_player = "O"  # Class-level variable to alternate starting play
+
     def __init__(self, root):
         self.root = root
         self.root.title("Tic Tac Toe")
