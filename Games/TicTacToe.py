@@ -50,6 +50,17 @@ class TicTacToe(tk.Tk, IGame):
         self.title("Tic Tac Toe")
         self.configure(bg='#ff6347')
 
+
+
+class TicTacToe:
+
+    alternating_starting_player = "O"
+
+
+    def __init__(self, root):
+        self.root = root
+        self.root.title("Tic Tac Toe")
+        self.root.configure(bg='#ff6347')
         self.buttons = [[None for _ in range(3)] for _ in range(3)]
         self.create_board()
 
