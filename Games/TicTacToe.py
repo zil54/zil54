@@ -47,6 +47,7 @@ class TicTacToe(tk.Tk, IGame):
 
     def __init__(self):
         super().__init__()
+        self.after(100, self.start_ai_turn)  # Delay AI start slightly
         self.title("Tic Tac Toe")
         self.configure(bg='#ff6347')
 
@@ -71,6 +72,11 @@ class TicTacToe:
         self.status_label = tk.Label(self, text=f"Player {self.current_player}'s turn", font=('normal', 20))
         self.status_label.grid(row=3, column=0, columnspan=3)
 
+        if self.current_player == "X":
+            self.computer.make_move(self)
+
+    def start_ai_turn(self):
+        """Make AI move after UI has rendered."""
         if self.current_player == "X":
             self.computer.make_move(self)
 
@@ -174,7 +180,7 @@ class TicTacToe:
         """Display result and reset board."""
         self.status_label.config(text=message)
         self.update_idletasks()
-        self.after(2000, self.start_new_game)
+        self.after(300, self.start_new_game)
 
     def start_new_game(self):
         """Begin a new round with alternating start player."""
@@ -190,16 +196,21 @@ class TicTacToe:
             self.computer.make_move(self)
 
     def process_turn(self):
-        """Handle move completion and turn switching."""
+        """Handle move completion and ensure turn switches properly."""
         if self.check_winner():
             self.reset_board(f"Player {self.current_player} wins!")
+            return
         elif self.check_draw():
             self.reset_board("It's a draw!")
-        else:
-            self.current_player = "X" if self.current_player == "O" else "O"
-            self.status_label.config(text=f"Player {self.current_player}'s turn")
-            if self.current_player == "X":
-                self.computer.make_move(self)
+            return
+
+        # Switch turns after making a move
+        self.current_player = "X" if self.current_player == "O" else "O"
+        self.status_label.config(text=f"Player {self.current_player}'s turn")
+
+        # If it's now AI's turn, make its move
+        if self.current_player == "X":
+            self.computer.make_move(self)
 
 if __name__ == "__main__":
     game = TicTacToe()
