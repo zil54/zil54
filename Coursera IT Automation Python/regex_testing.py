@@ -1,6 +1,8 @@
+
+
 #regex101.com
 
-'''Study guide: Advanced regular expressions
+"""Study guide: Advanced regular expressions
 Advanced regular expressions—commonly referred to as advanced regexes—are used by developers to execute complicated pattern matching against strings.
 In this reading, you will learn about some of the common examples of advanced regular expressions.
 
@@ -45,42 +47,23 @@ Test1, Test2, Test4
 Key takeaways
 
 The types of advanced regular expressions explained in this reading are just some of the more commonly used ones by developers.
-They are beneficial in pattern matching, text manipulation, and data validation. For more information, check out the following link:'''
+They are beneficial in pattern matching, text manipulation, and data validation. For more information, check out the following link:"""
 
 
 
 
+import os
 import re
+from regex_logging import RegexLogger
 from abc import ABC, abstractmethod
-
 
 class RegexOperations(ABC):
     """Abstract base class for regex operations."""
-
-    def __init__(self, text_list):
+    def __init__(self, text_list, logger):
         if not isinstance(text_list, list):
             raise ValueError("text_list must be a list of strings")
         self.text_list = text_list
-
-    @abstractmethod
-    def search_example(self, pattern, index=None):
-        pass
-
-    @abstractmethod
-    def match_example(self, pattern, index=None):
-        pass
-
-    @abstractmethod
-    def findall_example(self, pattern, index=None):
-        pass
-
-    @abstractmethod
-    def sub_example(self, pattern, replacement, index=None):
-        pass
-
-    @abstractmethod
-    def split_example(self, pattern, index=None):
-        pass
+        self.logger = logger
 
     @abstractmethod
     def extract_groups(self, pattern, index=None):
@@ -88,28 +71,48 @@ class RegexOperations(ABC):
 
 
 
-
     def print_result(self, operation_name, pattern, results, index=None):
-        """Standardized method for printing results with regex pattern info."""
-        if isinstance(index, slice):
-            target = f"on items {index.start + 1} to {index.stop}"
-        elif isinstance(index, int):
-            target = f"on item {index + 1}"
-        else:
-            target = "on all items"
+        """Console output method—keeps logging separate."""
+
+        target = (
+            f"on items {index.start + 1} to {index.stop}"
+            if isinstance(index, slice) else f"on item {index + 1}"
+            if isinstance(index, int) else "on all items"
+        )
 
         print(f"{operation_name} using pattern '{pattern}' {target}:")
 
         if isinstance(results, list):
-            for idx, result in enumerate(results):
-                print(f"- Text {idx + 1}: {result if result else 'No match found'}")
+            for idx, result in enumerate(results, start=1):
+                print(f"- Text {idx}: {result or 'No match found'}")
         else:
-            print(f"- {results if results else 'No match found'}")
+            print(f"- {results or 'No match found'}")
+
+
+    def log_result(self, operation_name, pattern, results):
+        log_msg = f"{operation_name} using pattern '{pattern}' with results: {results}"
+
+        if results is None:  # Invalid regex
+            self.logger.log_error_regex_implementation(operation_name, f"Failed execution: {log_msg}", "regex_error.log")
+        elif any(results):  # Successful match
+            self.logger.log_successful_regex_implementation(operation_name, log_msg, "regex_success.log")
+        else:  # No match found
+            self.logger.log_warning_regex_implementation(operation_name, log_msg, "regex_warning.log")
 
 
 class RegexDemo(RegexOperations):
     """Concrete implementation of RegexOperations."""
 
+
+    def validate_pattern(self, pattern):
+            """Checks if the regex pattern is valid."""
+            try:
+                re.compile(pattern)
+                return True
+            except re.error:
+                self.logger.log_error_regex_implementation("Validate Pattern", f"Invalid regex pattern: {pattern}",
+                                                           "regex_error.log")
+                return False
     def get_target_texts(self, index):
         """Helper method to retrieve target texts based on index type."""
         if isinstance(index, slice):
@@ -136,9 +139,17 @@ class RegexDemo(RegexOperations):
         self.print_result("Find All", pattern, results, index)
         return results
 
+#regex
     def sub_example(self, pattern, replacement, index=None):
         texts = self.get_target_texts(index)
         results = [re.sub(pattern, replacement, text) for text in texts]
+        self.print_result("Substitution", pattern, results, index)
+        return results
+
+#strings - (not re module related)
+    def replace_example(self, pattern, replacement, index=None):
+        texts = self.get_target_texts(index)
+        results = [re.replace(pattern, replacement, text) for text in texts]
         self.print_result("Substitution", pattern, results, index)
         return results
 
@@ -177,8 +188,8 @@ texts2 = [
     "User ID: ABC123, Status: Active",
     "Invoice No: 987654, Due: 2025-06-01"
 ]
-
-demo2 = RegexDemo(texts2)
+logger = RegexLogger(os.getcwd())
+demo2 = RegexDemo(texts2, logger)
 
 
 
@@ -190,7 +201,7 @@ demo2.extract_groups(r"Order ID: (\d+), Date: (\d{4}-\d{2}-\d{2})")
 
 
 
-demo = RegexDemo(texts)
+demo = RegexDemo(texts, logger)
 
 
 demo.search_example(r"world",0)
@@ -236,3 +247,73 @@ print(check_zip_code("Invalid:12345"))  # False (no space before ZIP)
 print(check_zip_code("Wrong format: 123456"))  # False (too many digits)
 print(check_zip_code("ZIP+4 error: 12345-678"))  # False (ZIP+4 must have exactly 4 digits after '-')
 print(check_zip_code("Not a ZIP: ABCDE"))  # False (not numeric)
+
+
+def extract_secure_domain(url):
+    pattern = r"https://www\.([a-zA-Z0-9-]+)\.(com|co)"
+    match = re.search(pattern, url)
+    return match.group(1) if match else None
+
+# Test cases
+urls = [
+    "https://www.example.com",
+    "http://www.test.com",
+    "https://www.my-site.co",
+    "http://www.another.co",
+    "https://www.secure123.com",
+    "http://www.unsecure-site.co"
+]
+
+for url in urls:
+    result = extract_secure_domain(url)
+    print(f"URL: {url} → Extracted: {result}")
+
+
+
+def parse_city_state(text):
+    """Extracts the state from a city-state field where they are separated by a comma or period."""
+    pattern = r"[\w\s]+[,.]\s*([A-Z]{2})$"  # Captures the state (assumed to be a two-letter code)
+    match = re.search(pattern, text)
+    return match.group(1) if match else None
+
+# Test cases
+data = [
+    "San Francisco, CA",
+    "New York. NY",
+    "Los Angeles, CA",
+    "Austin. TX",
+    "Chicago, IL",
+    "Miami. FL",
+    "Seattle, WA",
+    "Denver. CO"
+]
+
+for entry in data:
+    state = parse_city_state(entry)
+    print(f"Input: {entry} → State: {state}")
+
+    import re
+
+
+    def parse_city_state(text):
+        """Extracts the state from a city-state field, supporting abbreviations and full names."""
+        pattern = r"[\w\s]+[,.]\s*([A-Z]{2}|(?:[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*))$"
+        matches = re.findall(pattern, text)
+        return matches[0] if matches else None  # Returns only the state
+
+
+    # Test cases
+    data = [
+        "Hamilton, MN",
+        "Albuquerque, New Mexico",
+        "Portland, Oregon",
+        "Chicago, IL",
+        "Austin. Texas",
+        "New York. NY",
+        "Los Angeles, CA",
+        "Denver. Colorado"
+    ]
+
+    for entry in data:
+        state = parse_city_state(entry)
+        print(f"Input: {entry} → State: {state}")
