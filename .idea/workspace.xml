@@ -5,7 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1569bee1-4352-4717-95ef-ec74b34a3ee8" name="Default Changelist" comment="latest changes">
+      <change afterPath="$PROJECT_DIR$/Games/Chess.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/TTT_UnitTests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/chess/black_bishop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/chess/black_king.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/chess/black_knight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/chess/black_pawn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/chess/black_queen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/chess/black_rook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/chess/white_bishop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/chess/white_king.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/chess/white_knight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/chess/white_pawn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/chess/white_queen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/chess/white_rook.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coursera IT Automation Python/test_area.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coursera IT Automation Python/test_area.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Games/TicTacToe.py" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TicTacToe.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,10 +64,13 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Python tests.Python tests in TTT_UnitTests.py.executor": "Run",
     "Python tests.Python tests in test_area.py.executor": "Run",
+    "Python.Chess.executor": "Run",
     "Python.Parovoz.executor": "Run",
     "Python.Puzzles.executor": "Run",
     "Python.Tic Tac Toe.executor": "Run",
+    "Python.TicTacToe.executor": "Run",
     "Python.csv_testing.executor": "Run",
     "Python.data_structures.executor": "Run",
     "Python.file_testing.executor": "Run",
@@ -84,7 +102,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-7a29c1521ef0-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.11799.298" />
+        <option value="bundled-python-sdk-c69650fc56ca-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.15619.17" />
       </set>
     </attachedChunks>
   </component>
@@ -153,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747076032637</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="latest changes">
+      <option name="closed" value="true" />
+      <created>1747078545727</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1747078545727</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
