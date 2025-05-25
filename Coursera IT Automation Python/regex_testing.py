@@ -292,7 +292,7 @@ for entry in data:
     state = parse_city_state(entry)
     print(f"Input: {entry} → State: {state}")
 
-    import re
+
 
 
     def parse_city_state(text):
@@ -317,3 +317,26 @@ for entry in data:
     for entry in data:
         state = parse_city_state(entry)
         print(f"Input: {entry} → State: {state}")
+
+    import re
+
+
+    def show_time_of_pid(line):
+        """Extracts date, time, and process ID from syslog entries."""
+        pattern = r"^([A-Za-z]{3} \d{1,2} \d{2}:\d{2}:\d{2}).*\[(\d+)\]"
+        match = re.search(pattern, line)
+
+        return f"{match.group(1)} pid:{match.group(2)}" if match else None
+
+
+    # Test cases
+    logs = [
+        "Jul 6 14:01:23 computer.name CRON[29440]: USER (good_user)",
+        "Jul 6 14:02:08 computer.name jam_tag=psim[29187]: (UUID:006)",
+        "Jul 6 14:03:40 computer.name cacheclient[29807]: start syncing",
+        "Jul 6 14:05:01 computer.name CRON[29440]: USER (naughty_user)"
+    ]
+
+    for log in logs:
+        print(show_time_of_pid(log))
+
