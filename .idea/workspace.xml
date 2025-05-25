@@ -5,23 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1569bee1-4352-4717-95ef-ec74b34a3ee8" name="Default Changelist" comment="latest changes">
-      <change afterPath="$PROJECT_DIR$/Games/Chess.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/TTT_UnitTests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess/black_bishop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess/black_king.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess/black_knight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess/black_pawn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess/black_queen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess/black_rook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess/white_bishop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess/white_king.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess/white_knight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess/white_pawn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess/white_queen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess/white_rook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coursera IT Automation Python/algo1_binary_search.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coursera IT Automation Python/algorithm_visualizer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coursera IT Automation Python/misc_utilities.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coursera IT Automation Python/test_area.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coursera IT Automation Python/test_area.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Games/TicTacToe.py" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TicTacToe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coursera IT Automation Python/pest_area.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coursera IT Automation Python/io_streams.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coursera IT Automation Python/regex_testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coursera IT Automation Python/regex_testing.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,10 +27,27 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev_dima" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;zil54&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="121a3863-bb6f-4db7-b321-fbcf2fb6ef32" />
+        <option name="url" value="https://github.com/zil54/zil54.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Coursera IT Automation Python/regex_testing.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -71,13 +77,17 @@
     "Python.Puzzles.executor": "Run",
     "Python.Tic Tac Toe.executor": "Run",
     "Python.TicTacToe.executor": "Run",
+    "Python.algo1_binary_search.executor": "Run",
     "Python.csv_testing.executor": "Run",
     "Python.data_structures.executor": "Run",
     "Python.file_testing.executor": "Run",
     "Python.intro.executor": "Run",
+    "Python.io_streams.executor": "Run",
     "Python.loops_etc.executor": "Run",
+    "Python.misc_utilities.executor": "Run",
     "Python.os_testing.executor": "Run",
     "Python.pest_area.executor": "Run",
+    "Python.regex_logging.executor": "Run",
     "Python.regex_testing.executor": "Run",
     "Python.strings.executor": "Run",
     "Python.test_area.executor": "Run",
@@ -98,6 +108,28 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\dimon\PycharmProjects\zil54\Coursera IT Automation Python" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Python tests in TTT_UnitTests.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="zil54" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Games" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Games/TTT_UnitTests.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests in TTT_UnitTests.py" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -179,7 +211,23 @@
       <option name="project" value="LOCAL" />
       <updated>1747078545727</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="latest changes">
+      <option name="closed" value="true" />
+      <created>1747719125817</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1747719125817</updated>
+    </task>
+    <task id="LOCAL-00010" summary="latest changes">
+      <option name="closed" value="true" />
+      <created>1747850782263</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1747850782263</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
