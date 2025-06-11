@@ -15,9 +15,62 @@ print(sorted(fruit.items(), key=operator.itemgetter(1)))
 
 # !/usr/bin/env python3
 
+import os
+import shutil
+import multiprocessing
 
 
+def copy_file(file_pair):
+    """Copy a single file from source to destination."""
+    src_file, dest_file = file_pair
+    try:
+        shutil.copy2(src_file, dest_file)
+        # Uncomment the line below if you want to see each copy action.
+        # print(f"Copied {src_file} to {dest_file}")
+    except Exception as e:
+        print(f"Error copying {src_file} to {dest_file}: {e}")
 
+def create_directory_structure():
+    """
+    Walks through the source directory and creates all the directories
+    in the destination that mirror the source structure.
+    """
+    for dirpath, _, _ in os.walk(src):
+        # Compute the relative path from the source directory.
+        relative_path = os.path.relpath(dirpath, src)
+        # Construct the corresponding destination directory.
+        dest_dir = os.path.join(dest, relative_path)
+        os.makedirs(dest_dir, exist_ok=True)
+
+def build_file_list():
+    """
+    Constructs a list of (source_file, destination_file) tuples for all files
+    in the source directory.
+    """
+    file_list = []
+    for dirpath, _, filenames in os.walk(src):
+        relative_path = os.path.relpath(dirpath, src)
+        for filename in filenames:
+            src_file = os.path.join(dirpath, filename)
+            dest_file = os.path.join(dest, relative_path, filename)
+            file_list.append((src_file, dest_file))
+    return file_list
+
+if __name__ == '__main__':
+    # Step 1: Ensure the destination directory structure exists.
+    create_directory_structure()
+
+    # Step 2: Build the list of file copy tasks.
+    files_to_copy = build_file_list()
+    print(f"Starting copy of {len(files_to_copy)} files from {src} to {dest}...")
+
+    # Step 3: Copy files concurrently using a multiprocessing Pool.
+    pool = multiprocessing.Pool(processes=multiprocessing.cpu_count())
+    pool.map(copy_file, files_to_copy)
+    pool.close()
+    pool.join()
+
+    print("File copy completed!")
 def error_search(log_file):
     error = input("What is the error? ")
     returned_errors = []
