@@ -5,28 +5,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1569bee1-4352-4717-95ef-ec74b34a3ee8" name="Default Changelist" comment="latest changes">
-      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames/data/ne_110m_admin_0_countries/ne_110m_admin_0_countries.README.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames/data/ne_110m_admin_0_countries/ne_110m_admin_0_countries.VERSION.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames/data/ne_110m_admin_0_countries/ne_110m_admin_0_countries.cpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames/data/ne_110m_admin_0_countries/ne_110m_admin_0_countries.dbf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames/data/ne_110m_admin_0_countries/ne_110m_admin_0_countries.prj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames/data/ne_110m_admin_0_countries/ne_110m_admin_0_countries.shp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames/data/ne_110m_admin_0_countries/ne_110m_admin_0_countries.shx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/french_guiana_capital.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/french_guiana_country.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames/map_generation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames/quiz_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames/quiz_ui.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames1_old/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames1_old/quiz_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames1_old/quiz_ui.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Puppet/Postgres Examples/Postgres_setup_nodes_example.pp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Puppet/Pupper_nodes.pp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Recursion_Reloaded/Recursion_Practice.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coursera IT Automation Python/misc_utilities.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coursera IT Automation Python/misc_utilities.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Puppet/Postgres Examples/Postgres installation.pp" beforeDir="false" afterPath="$PROJECT_DIR$/Puppet/Postgres Examples/Postgres setup.pp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/argentina_capital.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/argentina_capital.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/argentina_country.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/argentina_country.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/belize_capital.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/belize_capital.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/belize_country.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/belize_country.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/bolivia_capital.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/bolivia_capital.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/bolivia_country.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/bolivia_country.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/brazil_capital.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/brazil_capital.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/brazil_country.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/brazil_country.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/chile_capital.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/chile_capital.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/chile_country.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/chile_country.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/colombia_capital.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/colombia_capital.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/colombia_country.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/colombia_country.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/costa_rica_capital.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/costa_rica_capital.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/costa_rica_country.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/costa_rica_country.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/ecuador_capital.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/ecuador_capital.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/ecuador_country.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/ecuador_country.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/el_salvador_capital.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/el_salvador_capital.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/el_salvador_country.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/el_salvador_country.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/french_guiana_capital.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/french_guiana_capital.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/french_guiana_country.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/french_guiana_country.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/guatemala_capital.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/guatemala_capital.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/guatemala_country.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/guatemala_country.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/guyana_capital.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/guyana_capital.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/guyana_country.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/guyana_country.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/honduras_capital.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/honduras_capital.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/honduras_country.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/honduras_country.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/nicaragua_capital.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/nicaragua_capital.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/nicaragua_country.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/nicaragua_country.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/panama_capital.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/panama_capital.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/panama_country.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/panama_country.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/paraguay_capital.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/paraguay_capital.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/paraguay_country.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/paraguay_country.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/peru_capital.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/peru_capital.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/peru_country.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/peru_country.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/suriname_capital.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/suriname_capital.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/suriname_country.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/suriname_country.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/uruguay_capital.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/uruguay_capital.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/uruguay_country.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/uruguay_country.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/venezuela_capital.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/venezuela_capital.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/images/venezuela_country.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/venezuela_country.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/map_generation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/map_generation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/quiz_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/quiz_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames/quiz_ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/Games/TestPrepsGames/quiz_ui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames1_old/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames1_old/quiz_manager.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/TestPrepsGames1_old/quiz_ui.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,51 +108,53 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Python tests.Python tests in TTT_UnitTests.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_area.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Chess.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Parovoz.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Parovoz2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Puzzles.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Recursion_Practice.executor&quot;: &quot;Run&quot;,
-    &quot;Python.TestPreps.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Tic Tac Toe.executor&quot;: &quot;Run&quot;,
-    &quot;Python.TicTacToe.executor&quot;: &quot;Run&quot;,
-    &quot;Python.algo1_binary_search.executor&quot;: &quot;Run&quot;,
-    &quot;Python.csv_testing.executor&quot;: &quot;Run&quot;,
-    &quot;Python.data_structures.executor&quot;: &quot;Run&quot;,
-    &quot;Python.file_testing.executor&quot;: &quot;Run&quot;,
-    &quot;Python.image_generation.executor&quot;: &quot;Run&quot;,
-    &quot;Python.intro.executor&quot;: &quot;Run&quot;,
-    &quot;Python.io_streams.executor&quot;: &quot;Run&quot;,
-    &quot;Python.loops_etc.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.map_generation.executor&quot;: &quot;Run&quot;,
-    &quot;Python.misc_utilities.executor&quot;: &quot;Run&quot;,
-    &quot;Python.os_testing.executor&quot;: &quot;Run&quot;,
-    &quot;Python.pest_area.executor&quot;: &quot;Run&quot;,
-    &quot;Python.regex_logging.executor&quot;: &quot;Run&quot;,
-    &quot;Python.regex_testing.executor&quot;: &quot;Run&quot;,
-    &quot;Python.strings.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test_area.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev__dima&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/dimon/PycharmProjects/zil54/Games&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Python tests.Python tests in TTT_UnitTests.py.executor": "Run",
+    "Python tests.Python tests in test_area.py.executor": "Run",
+    "Python.Chess.executor": "Run",
+    "Python.Main.executor": "Run",
+    "Python.Parovoz.executor": "Run",
+    "Python.Parovoz2.executor": "Run",
+    "Python.Puzzles.executor": "Run",
+    "Python.Recursion_Practice.executor": "Run",
+    "Python.TestPreps.executor": "Run",
+    "Python.Tic Tac Toe.executor": "Run",
+    "Python.TicTacToe.executor": "Run",
+    "Python.algo1_binary_search.executor": "Run",
+    "Python.csv_testing.executor": "Run",
+    "Python.data_structures.executor": "Run",
+    "Python.file_testing.executor": "Run",
+    "Python.image_generation.executor": "Run",
+    "Python.intro.executor": "Run",
+    "Python.io_streams.executor": "Run",
+    "Python.loops_etc.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.map_generation.executor": "Run",
+    "Python.misc_utilities.executor": "Run",
+    "Python.os_testing.executor": "Run",
+    "Python.pest_area.executor": "Run",
+    "Python.quiz_manager.executor": "Run",
+    "Python.quiz_ui.executor": "Run",
+    "Python.regex_logging.executor": "Run",
+    "Python.regex_testing.executor": "Run",
+    "Python.strings.executor": "Run",
+    "Python.test_area.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "dev__dima",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/dimon/PycharmProjects/zil54/Games",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;HTML&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "HTML"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\dimon\PycharmProjects\zil54\Games" />
@@ -296,7 +323,23 @@
       <option name="project" value="LOCAL" />
       <updated>1749673180264</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="latest changes">
+      <option name="closed" value="true" />
+      <created>1758483444510</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1758483444510</updated>
+    </task>
+    <task id="LOCAL-00014" summary="latest changes">
+      <option name="closed" value="true" />
+      <created>1758483667118</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1758483667118</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

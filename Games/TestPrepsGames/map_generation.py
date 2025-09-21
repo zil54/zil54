@@ -59,7 +59,7 @@ world = gpd.read_file("data/ne_110m_admin_0_countries/ne_110m_admin_0_countries.
 
 
 
-def generate_country_map(country, label, save_path, capital_coords=None):
+def generate_country_map(country, label, save_path, capital_coords=None, capital=None):
     country_shape = world[world["ADMIN"] == country]
     if country_shape.empty:
         print(f"❌ Country '{country}' not found.")
@@ -69,12 +69,12 @@ def generate_country_map(country, label, save_path, capital_coords=None):
     plt.axis("off")
 
     centroid = country_shape.geometry.centroid
-    plt.text(centroid.x, centroid.y, label, ha="center", va="center", fontsize=14, weight="bold")
+    plt.text(centroid.x, centroid.y, label, ha="center", va="center", fontsize=15, weight="bold")
 
-    if capital_coords:
+    if capital_coords and capital:
         cap_point = Point(capital_coords[0], capital_coords[1])
         plt.plot(cap_point.x, cap_point.y, "ro", markersize=8)
-        plt.text(cap_point.x, cap_point.y, label, fontsize=12, ha="left", va="bottom", color="red")
+        plt.text(cap_point.x + 0.5, cap_point.y + 0.5, capital, fontsize=12, ha="left", va="bottom", color="red")
 
     os.makedirs("images", exist_ok=True)
     plt.savefig(save_path, bbox_inches="tight")
@@ -82,11 +82,16 @@ def generate_country_map(country, label, save_path, capital_coords=None):
     print(f"✅ Saved {save_path}")
 
 # Generate all 41 images
-#for country, capital in country_capitals.items():
-#    generate_country_map(country, country, f"images/{country.lower().replace(' ', '_')}_country.png")
-#    coords = capital_coords.get(capital)
-#    generate_country_map(country, capital, f"images/{country.lower().replace(' ', '_')}_capital.png", capital_coords=coords)
+for country, capital in country_capitals.items():
+    # country_to_capital image: label is country
+    generate_country_map(country, country, f"images/{country.lower().replace(' ', '_')}_country.png")
+
+    # capital_to_country image: label is empty or just country
+    coords = capital_coords.get(capital)
+    generate_country_map(country, "", f"images/{country.lower().replace(' ', '_')}_capital.png",
+                         capital_coords=coords, capital=capital)
 
 # Special case: French Guiana (part of France)
 generate_country_map("France", "French Guiana", "images/french_guiana_country.png")
-generate_country_map("France", "Cayenne", "images/french_guiana_capital.png", capital_coords=(-52.3333, 4.9333))
+generate_country_map("France", "", "images/french_guiana_capital.png",
+                     capital_coords=(-52.3333, 4.9333), capital="Cayenne")

@@ -10,7 +10,13 @@ class QuizManager:
         self.current_index = 0
         self.score = 0
         self.mode = "multiple_choice"
+        self.visual_mode = True  # default to visual phrasing
 
+    def set_visual_mode(self, value: bool):
+        self.visual_mode = value
+
+    def is_visual_mode(self):
+        return self.visual_mode
     def load_questions(self):
         self.cursor.execute("""
             SELECT country, capital, image_path, direction
@@ -24,7 +30,7 @@ class QuizManager:
         if self.current_index < self.total_questions:
             row = self.questions[self.current_index]
             self.current_index += 1
-            return row  # country, capital, image_path, direction
+            return row
         return None
 
     def check_answer(self, user_answer, correct_answer):

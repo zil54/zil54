@@ -39,10 +39,23 @@ class QuizUI:
         self.timer_label = tk.Label(self.root, font=("Arial", 12), fg="blue")
         self.timer_label.pack()
 
+        self.toggle_button = tk.Button(self.root, text="Toggle Visual/Text Mode", font=("Arial", 12),
+                                       command=self.toggle_mode)
+        self.toggle_button = tk.Button(self.root, text="Switch to Text Mode", font=("Arial", 12),
+                                       command=self.toggle_mode)
+
+    def toggle_mode(self):
+        current = self.quiz.is_visual_mode()
+        self.quiz.set_visual_mode(not current)
+        new_label = "Switch to Visual Mode" if current else "Switch to Text Mode"
+        self.toggle_button.config(text=new_label)
+        self.feedback_label.config(text=f"{'Visual' if not current else 'Text'} Mode Activated", fg="blue")
+
     def show_image(self, image_path):
         try:
+            print(f"Trying to load image: {image_path}")
             img = Image.open(image_path)
-            img = img.resize((300, 200))
+            img = img.resize(((215, 165)))
             self.tk_image = ImageTk.PhotoImage(img)
             self.image_label.config(image=self.tk_image)
         except Exception as e:
@@ -80,10 +93,16 @@ class QuizUI:
         country, capital, image_path, direction = question
         self.correct_answer = capital if direction == "country_to_capital" else country
 
-        self.question_label.config(
-            text=f"What is the capital of {country}?" if direction == "country_to_capital"
-                 else f"{capital} is the capital of which country?"
-        )
+        if self.quiz.is_visual_mode():
+            if direction == "country_to_capital":
+                self.question_label.config(text="🗺️ What is the capital of this?")
+            else:
+                self.question_label.config(text="🗺️ What is the country whose capital is this?")
+        else:
+            self.question_label.config(
+                text=f"What is the capital of {country}?" if direction == "country_to_capital"
+                else f"{capital} is the capital of which country?"
+            )
 
         self.show_image(image_path)
         self.feedback_label.config(text="")
