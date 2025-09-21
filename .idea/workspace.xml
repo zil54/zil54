@@ -5,12 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1569bee1-4352-4717-95ef-ec74b34a3ee8" name="Default Changelist" comment="latest changes">
-      <change afterPath="$PROJECT_DIR$/Coursera IT Automation Python/algo1_binary_search.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coursera IT Automation Python/algorithm_visualizer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coursera IT Automation Python/misc_utilities.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames/data/ne_110m_admin_0_countries/ne_110m_admin_0_countries.README.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames/data/ne_110m_admin_0_countries/ne_110m_admin_0_countries.VERSION.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames/data/ne_110m_admin_0_countries/ne_110m_admin_0_countries.cpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames/data/ne_110m_admin_0_countries/ne_110m_admin_0_countries.dbf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames/data/ne_110m_admin_0_countries/ne_110m_admin_0_countries.prj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames/data/ne_110m_admin_0_countries/ne_110m_admin_0_countries.shp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames/data/ne_110m_admin_0_countries/ne_110m_admin_0_countries.shx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/french_guiana_capital.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames/images/french_guiana_country.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames/map_generation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames/quiz_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames/quiz_ui.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames1_old/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames1_old/quiz_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Games/TestPrepsGames1_old/quiz_ui.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Puppet/Postgres Examples/Postgres_setup_nodes_example.pp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Puppet/Pupper_nodes.pp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recursion_Reloaded/Recursion_Practice.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coursera IT Automation Python/pest_area.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coursera IT Automation Python/io_streams.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coursera IT Automation Python/regex_testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coursera IT Automation Python/regex_testing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coursera IT Automation Python/misc_utilities.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coursera IT Automation Python/misc_utilities.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Puppet/Postgres Examples/Postgres installation.pp" beforeDir="false" afterPath="$PROJECT_DIR$/Puppet/Postgres Examples/Postgres setup.pp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +47,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -66,50 +83,85 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Python tests.Python tests in TTT_UnitTests.py.executor": "Run",
-    "Python tests.Python tests in test_area.py.executor": "Run",
-    "Python.Chess.executor": "Run",
-    "Python.Parovoz.executor": "Run",
-    "Python.Puzzles.executor": "Run",
-    "Python.Tic Tac Toe.executor": "Run",
-    "Python.TicTacToe.executor": "Run",
-    "Python.algo1_binary_search.executor": "Run",
-    "Python.csv_testing.executor": "Run",
-    "Python.data_structures.executor": "Run",
-    "Python.file_testing.executor": "Run",
-    "Python.intro.executor": "Run",
-    "Python.io_streams.executor": "Run",
-    "Python.loops_etc.executor": "Run",
-    "Python.misc_utilities.executor": "Run",
-    "Python.os_testing.executor": "Run",
-    "Python.pest_area.executor": "Run",
-    "Python.regex_logging.executor": "Run",
-    "Python.regex_testing.executor": "Run",
-    "Python.strings.executor": "Run",
-    "Python.test_area.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "dev__dima",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/dimon/PycharmProjects/zil54/Coursera IT Automation Python",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Python tests.Python tests in TTT_UnitTests.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_area.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Chess.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Parovoz.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Parovoz2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Puzzles.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Recursion_Practice.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TestPreps.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Tic Tac Toe.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TicTacToe.executor&quot;: &quot;Run&quot;,
+    &quot;Python.algo1_binary_search.executor&quot;: &quot;Run&quot;,
+    &quot;Python.csv_testing.executor&quot;: &quot;Run&quot;,
+    &quot;Python.data_structures.executor&quot;: &quot;Run&quot;,
+    &quot;Python.file_testing.executor&quot;: &quot;Run&quot;,
+    &quot;Python.image_generation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.intro.executor&quot;: &quot;Run&quot;,
+    &quot;Python.io_streams.executor&quot;: &quot;Run&quot;,
+    &quot;Python.loops_etc.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.map_generation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.misc_utilities.executor&quot;: &quot;Run&quot;,
+    &quot;Python.os_testing.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pest_area.executor&quot;: &quot;Run&quot;,
+    &quot;Python.regex_logging.executor&quot;: &quot;Run&quot;,
+    &quot;Python.regex_testing.executor&quot;: &quot;Run&quot;,
+    &quot;Python.strings.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_area.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev__dima&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dimon/PycharmProjects/zil54/Games&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "HTML"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;HTML&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dimon\PycharmProjects\zil54\Games" />
+      <recent name="C:\Users\dimon\PycharmProjects\zil54\Puppet" />
       <recent name="C:\Users\dimon\PycharmProjects\zil54\Coursera IT Automation Python" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dimon\PycharmProjects\zil54\Games\TestPrepsGames" />
+      <recent name="C:\Users\dimon\PycharmProjects\zil54\Puppet\Postgres Examples" />
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="Recursion_Practice" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="zil54" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Recursion_Reloaded" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Recursion_Reloaded/Recursion_Practice.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests in TTT_UnitTests.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="zil54" />
       <option name="ENV_FILES" value="" />
@@ -127,6 +179,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Recursion_Practice" />
         <item itemvalue="Python tests.Python tests in TTT_UnitTests.py" />
       </list>
     </recent_temporary>
@@ -227,7 +280,23 @@
       <option name="project" value="LOCAL" />
       <updated>1747850782263</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="latest changes">
+      <option name="closed" value="true" />
+      <created>1748196297740</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1748196297740</updated>
+    </task>
+    <task id="LOCAL-00012" summary="latest changes">
+      <option name="closed" value="true" />
+      <created>1749673180264</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1749673180264</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

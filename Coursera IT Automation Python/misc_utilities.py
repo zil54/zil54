@@ -3,6 +3,11 @@ import sys
 import re
 import os
 import operator
+import os
+import shutil
+import multiprocessing
+
+
 print(os.path.dirname(sys.executable))  # Example: C:\Python39
 # Running a command and capturing the output
 result = subprocess.run(["cmd", "/c", "echo Hello, Windows!"], capture_output=True, text=True)
@@ -15,9 +20,6 @@ print(sorted(fruit.items(), key=operator.itemgetter(1)))
 
 # !/usr/bin/env python3
 
-import os
-import shutil
-import multiprocessing
 
 
 def copy_file(file_pair):
