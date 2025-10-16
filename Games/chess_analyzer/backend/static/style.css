@@ -1,0 +1,35 @@
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+#svg-container svg {
+  width: 200px;
+  height: 200px;
+}
+
+
+
+#board-container {
+  text-align: center;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#eval {
+  margin-top: 20px;
+  font-family: Arial;
+  font-size: 14px;
+  white-space: pre-line;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  width: 100%;
+  text-align: left;
+}

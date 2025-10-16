@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chess Analyzer</title>
+  <style>
+    body {
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    #board-container {
+      text-align: center;
+      max-width: 600px;
+    }
+
+    input, button {
+      margin: 5px;
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+
+    #eval {
+      margin-top: 10px;
+      font-family: Arial;
+      font-size: 14px;
+      white-space: pre-line;
+    }
+  </style>
+        <script src="/static/analyze.js"></script>
+</head>
+<body>
+
+  <div id="board-container">
+    <h2>Enter FEN:</h2>
+    <input type="text" id="fen" value="rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1" />
+    <button onclick="renderBoard()">Render</button>
+    <div id="svg-container"></div>
+    <button onclick="analyze()">Analyze Position</button>
+    <button onclick="stopAnalysis()">Stop Analysis</button>
+ </div>
+ <div id="eval"></div>
+
+
+
+  <script>
+    async function renderBoard() {
+      const fen = document.getElementById("fen").value;
+      const res = await fetch("http://localhost:8000/svg", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ fen })
+      });
+      const svg = await res.text();
+      document.getElementById("svg-container").innerHTML = svg;
+    }
+
+    async function analyze() {
+      const fen = document.getElementById("fen").value;
+      const res = await fetch("http://localhost:8000/analyze", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ fen })
+      });
+      const data = await res.json();
+
+      if (data.error) {
+        document.getElementById("eval").innerText = "Error: " + data.error;
+      } else {
+        const lines = data.variations.map((v, i) => {
+          const score = v.score >= 10000
+            ? `Mate in ${v.score - 10000}`
+            : `${(v.score / 100).toFixed(2)} eval`;
+          return `#${i + 1}: ${v.line.join(" ")} (${score})`;
+        });
+        document.getElementById("eval").innerText = lines.join("\n");
+      }
+    }
+  </script>
+
+</body>
+</html>
