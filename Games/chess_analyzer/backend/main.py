@@ -81,6 +81,10 @@ async def analyze_ws(websocket: WebSocket):
     logger.info("Sending fen....")
     stockfish.send(f"position fen {fen}")
     logger.info("Sending go infinite...")
+
+    stockfish.send("uci")
+    stockfish.send("setoption name MultiPV value 3")
+    stockfish.send(f"position fen {fen}")
     stockfish.send("go infinite")
 
     try:

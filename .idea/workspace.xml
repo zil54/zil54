@@ -5,45 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1569bee1-4352-4717-95ef-ec74b34a3ee8" name="Default Changelist" comment="latest changes">
-      <change afterPath="$PROJECT_DIR$/Games/chess_analyzer/backend/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess_analyzer/backend/logs/logger.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess_analyzer/backend/svg/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess_analyzer/engine/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess_analyzer/frontend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess_analyzer/frontend/.vscode/extensions.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess_analyzer/frontend/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess_analyzer/frontend/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess_analyzer/frontend/jsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess_analyzer/frontend/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess_analyzer/frontend/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess_analyzer/frontend/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess_analyzer/frontend/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess_analyzer/frontend/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess_analyzer/frontend/src/assets/base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess_analyzer/frontend/src/assets/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess_analyzer/frontend/src/assets/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess_analyzer/frontend/src/components/Analyzer.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess_analyzer/frontend/src/components/HelloWorld.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess_analyzer/frontend/src/components/TheWelcome.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess_analyzer/frontend/src/components/WelcomeItem.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess_analyzer/frontend/src/components/icons/IconCommunity.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess_analyzer/frontend/src/components/icons/IconDocumentation.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess_analyzer/frontend/src/components/icons/IconEcosystem.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess_analyzer/frontend/src/components/icons/IconSupport.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess_analyzer/frontend/src/components/icons/IconTooling.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess_analyzer/frontend/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Games/chess_analyzer/frontend/vite.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Games/chess_analyzer/backend/engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/Games/chess_analyzer/engine/engine.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Games/chess_analyzer/backend/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Games/chess_analyzer/backend/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Games/chess_analyzer/backend/static/analyze.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Games/chess_analyzer/backend/static/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Games/chess_analyzer/backend/static/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Games/chess_analyzer/backend/stockfish_session.py" beforeDir="false" afterPath="$PROJECT_DIR$/Games/chess_analyzer/engine/stockfish_session.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Games/chess_analyzer/backend/svg.py" beforeDir="false" afterPath="$PROJECT_DIR$/Games/chess_analyzer/backend/svg/svg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Games/chess_analyzer/frontend/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Games/chess_analyzer/frontend/src/components/SvgBoard.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Games/chess_analyzer/stockfish/sf.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Games/chess_analyzer/engine/sf.exe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -358,7 +321,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760599073556</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="latest changes">
+      <option name="closed" value="true" />
+      <created>1760946776313</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1760946776314</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
