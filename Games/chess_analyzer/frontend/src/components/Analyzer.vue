@@ -30,6 +30,12 @@ data() {
     socket: null
   };
 },
+  mounted() {
+    // ✅ Set the page title when this component is mounted
+    document.title = "Chess Analyzer";
+  },
+
+
   methods: {
     async renderBoard() {
       const res = await fetch("http://localhost:8000/svg", {

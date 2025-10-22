@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Request, WebSocket
+from fastapi import FastAPI, Request, WebSocket, WebSocketDisconnect
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import Response, HTMLResponse, FileResponse
 from fastapi.middleware.cors import CORSMiddleware
@@ -72,30 +72,31 @@ async def analyze(request: Request):
 @app.websocket("/ws/analyze")
 async def analyze_ws(websocket: WebSocket):
     await websocket.accept()
-    fen = await websocket.receive_text()
-
-    logger.info("Sending uci....")
-    stockfish.send("uci")
-    logger.info("Send 3 lines")
-    stockfish.send("setoption name MultiPV value 3")
-    logger.info("Sending fen....")
-    stockfish.send(f"position fen {fen}")
-    logger.info("Sending go infinite...")
-
-    stockfish.send("uci")
-    stockfish.send("setoption name MultiPV value 3")
-    stockfish.send(f"position fen {fen}")
-    stockfish.send("go infinite")
-
     try:
+        fen = await websocket.receive_text()
+        stockfish.send("uci")
+        stockfish.send("setoption name MultiPV value 3")
+        stockfish.send(f"position fen {fen}")
+        stockfish.send("go infinite")
+
         async for line in stream_stockfish():
             if "pv" in line:
-                await websocket.send_text(line)
-                logger.info("Displaying infinite was successful")
+                try:
+                    await websocket.send_text(line)
+                except WebSocketDisconnect:
+                    logger.info("Client disconnected, stopping stream.")
+                    break
+                except RuntimeError as e:
+                    if "Cannot call \"send\"" in str(e):
+                        logger.info("Tried to send after close, stopping stream.")
+                        break
+                    raise
+    except WebSocketDisconnect:
+        logger.info("WebSocket closed before analysis finished.")
     except Exception as e:
-        await websocket.send_text(f"Error: {str(e)}")
-        logger.error(str(e))
-        await websocket.close()
+        logger.error("Unexpected error: %s", e)
+        # ⚠️ Don't send to client here, socket may be closed
+
 
 async def stream_stockfish():
     loop = asyncio.get_event_loop()
