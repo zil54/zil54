@@ -10,8 +10,10 @@ import uvicorn
 import asyncio
 import os
 from logs.logger import logger
+from api.routes import router as api_router
 
 app = FastAPI()
+app.include_router(api_router)
 
 # CORS for frontend access
 app.add_middleware(
