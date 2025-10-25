@@ -1,74 +1,60 @@
-from Games.chess_analyzer.backend.db.core import SessionLocal
-from Games.chess_analyzer.backend.db.models import SessionAnalysis, AnalysisLines
+# Games/chess_analyzer/backend/db/repo.py
+from typing import Optional
+from Games.chess_analyzer.backend.db.core import get_connection
 
-# -------------------------
-# Session management
-# -------------------------
+# -------------------------------------------------------------------
+# Session CRUD
+# -------------------------------------------------------------------
 
-async def create_session(fen: str) -> SessionAnalysis:
-    """Create a new analysis session with given FEN."""
-    async with SessionLocal() as s:
-        obj = SessionAnalysis(fen=fen, status="created")
-        s.add(obj)
-        await s.commit()
-        await s.refresh(obj)
-        return obj
-
-
-async def get_session(session_id):
-    """Fetch a session by ID."""
-    async with SessionLocal() as s:
-        return await s.get(SessionAnalysis, session_id)
-
-
-# -------------------------
-# Analysis lines
-# -------------------------
-
-async def upsert_line(session_id, depth: int, multipv: int, line: str) -> None:
-    """Insert or update an analysis line for a given session/depth/multipv."""
-    async with SessionLocal() as s:
-        obj = await s.get(
-            AnalysisLines,
-            {"session_id": session_id, "depth": depth, "multipv": multipv}
-        )
-        if obj:
-            obj.line = line
-        else:
-            obj = AnalysisLines(
-                session_id=session_id,
-                depth=depth,
-                multipv=multipv,
-                line=line,
+async def create_session(name: str) -> int:
+    """
+    Insert a new session row and return its id.
+    """
+    async with await get_connection() as conn:
+        async with conn.cursor() as cur:
+            await cur.execute(
+                "INSERT INTO session_analysis (name) VALUES (%s) RETURNING id",
+                (name,),
             )
-            s.add(obj)
-        await s.commit()
+            row = await cur.fetchone()
+        await conn.commit()
+        return row["id"]
 
 
-async def get_latest_lines(session_id):
-    """Return the max depth and all lines at that depth for a session."""
-    async with SessionLocal() as s:
-        # Get the maximum depth for this session
-        result = await s.execute(
-            """
-            SELECT MAX(depth) FROM analysis_lines
-            WHERE session_id = :sid
-            """,
-            {"sid": session_id},
-        )
-        row = result.first()
-        if not row or row[0] is None:
-            return None, []
+async def get_session(session_id: int) -> Optional[dict]:
+    """
+    Fetch a session row by id.
+    """
+    async with await get_connection() as conn:
+        async with conn.cursor() as cur:
+            await cur.execute(
+                "SELECT id, name, created_at FROM session_analysis WHERE id = %s",
+                (session_id,),
+            )
+            return await cur.fetchone()
 
-        max_depth = row[0]
 
-        # Fetch all lines at that depth
-        lines = await s.execute(
-            """
-            SELECT * FROM analysis_lines
-            WHERE session_id = :sid AND depth = :d
-            ORDER BY multipv
-            """,
-            {"sid": session_id, "d": max_depth},
-        )
-        return max_depth, lines.fetchall()
+async def get_latest_lines(limit: int = 10) -> list[dict]:
+    """
+    Fetch the most recent sessions.
+    """
+    async with await get_connection() as conn:
+        async with conn.cursor() as cur:
+            await cur.execute(
+                "SELECT id, name, created_at FROM session_analysis "
+                "ORDER BY created_at DESC LIMIT %s",
+                (limit,),
+            )
+            return await cur.fetchall()
+
+
+async def get_history() -> list[dict]:
+    """
+    Fetch all sessions in chronological order.
+    """
+    async with await get_connection() as conn:
+        async with conn.cursor() as cur:
+            await cur.execute(
+                "SELECT id, name, created_at FROM session_analysis ORDER BY id"
+            )
+            return await cur.fetchall()
